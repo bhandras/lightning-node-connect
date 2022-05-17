@@ -26,12 +26,13 @@ func newHashmailHarness() *hashmailHarness {
 			Authenticator: &aperture.AuthConfig{
 				Disable: true,
 			},
-			Etcd: &aperture.EtcdConfig{},
+			Tor: &aperture.TorConfig{},
 			HashMail: &aperture.HashMailConfig{
 				Enabled:               true,
 				MessageRate:           time.Millisecond,
 				MessageBurstAllowance: math.MaxUint32,
 			},
+			Prometheus: &aperture.PrometheusConfig{},
 			DebugLevel: "debug",
 		},
 	}
